@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  paano-front-con:
+    image: alialikhahasl/paano-front-con
+    ports:
+      - "8080:3000"
+    networks:
+      net1:
+        - ipv4_address: 172.18.0.2
+  paano-discovery-con:
+    image: alialikhahasl/paano-discovery-con
+    ports:
+      - "8010:8010"
+    networks:
+      net1:
+        - ipv4_address: 172.18.0.3
+  paano-gateway-con:
+    image: alialikhahasl/paano-gateway-con
+    ports:
+      - "8082:8082"
+    networks:
+      net1:
+        - ipv4_address: 172.18.0.4
+  paano-user-con:
+    image: alialikhahasl/paano-user-con
+    ports:
+      - "8083:8083"
+    networks:
+      fro
+

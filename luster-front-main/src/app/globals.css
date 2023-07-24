@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Vazir";
+        src: url("../../public/fonts/Vazir.eot");
+        /* IE9 Compat Modes */
+        src: url("../../public/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+        url("../../public/fonts/Vazir.woff2") format("woff2"),
+        url("../../public/fonts/Vazir.woff") format("woff"),
+        url("../../public/fonts/Vazir.ttf") format("truetype");
+        /* Safari, Android, iOS */
+    }
+}
+
+@layer utilities{
+    .cust-pr{
+        padding-right: 79px;
+    }
+    .small-header-2{
+        padding: 2px;
+    }
+    .mx-h-700{
+        max-height: 700px;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
+
+@layer base{
+    h1{
+        font-size: 30px;
+        @apply bg-blue-900;
+    }
+    h2{
+         font-size: 20px;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply bg-blue-800 mx-auto py-0.5
+    }
+    .nav-item{
+        /*@apply transition duration-300*/
+        /*ease-in-out text-cyan-50 bg-amber-50 text-black p-1.5*/
+        /*rounded-lg hover:bg-blue-200 hover:text-blue-900*/
+        /*hover:border-b-4 hover:shadow-md*/
+        @apply transition ease-in-out
+        delay-150 bg-white hover:-translate-y-1 hover:scale-110
+        duration-300
+        rounded-lg p-2
+    }
+    .nav-item-active{
+        @apply transition duration-300 ease-in-out
+        text-black p-1.5 rounded-lg
+        hover:bg-blue-200
+        hover:border-b-4 hover:shadow-md
+    }
+    .small-header{
+        @apply transition duration-300
+        width: 64px height: 64px
+    }
+    .product-list{
+        @apply border text-center hover:border-luster-1 rounded-lg smallphone:w-20 smallphone:h-14 sm:w-60 sm:h-10
+    }
+    .header-btn{
+        @apply text-center
+        bg-luster-2  border-b-[8px] border-b-luster-1
+        text-white align-middle
+        border-2 shadow-xl h-[75px]
+    }
+    .about-img{
+        @apply
+        float-left border-8 rounded-2xl border-luster-2 border-double rounded-lg  w-[250px] h-[200px] object-contain px-2 mix-blend-multiply
+    }
+    .container-about{
+        @apply
+        container
+        bg-red-400
+        mx-auto pt-32 h-auto
+        font-vazir text-base text-justify
+    }
+
+    /* profile page dashboard start */
+    .container-profile-dashboard{
+        @apply container mx-auto p-10  font-bold  font-vazir gap-3
+
+
+    }
+    .col-profile{
+        @apply  px-10 py-5 text-black text-center
+    }
+
+    .col-profile-2{
+        @apply    py-5
+        grid grid-cols-1
+        md:grid-cols-3 gap-3 md:px-10 md:pt-16
+    }
+
+    .col-profile-address{
+        @apply  col-span-3
+    }
+    .col-profile img{
+        @apply w-32 h-32 rounded-full border-4 border-luster-2 border-opacity-10 mx-auto mb-5
+    }
+    /* profile page dashboard end */
+
+    /* preside page main start */
+    .container-banner{
+        @apply container
+        mx-auto px-10
+        font-vazir bg-red-200
+        container mx-auto px-10 mt-1
+
+    }
+    .card-banner{
+        @apply text-white text-center
+        w-[370px]
+    }
+    .card-banner p {
+        @apply py-3 border-2 border-luster-2 mt-2
+    }
+    .img-banner{
+        @apply w-[370px]
+    }
+    /* preside page main start */
+
+    /* preside page design start */
+    .img-preside{
+        @apply float-left
+        border-8  border-luster-1 border-double
+        rounded-2xl  mx-16 sm:mx-10 md:mx-3 mb-4
+        w-[200px] h-[200px]
+        object-contain  mix-blend-multiply
+
+    }
+    .header-preside{
+        @apply
+        border-b-4 border-b-luster-1
+    }
+    /* preside page design end */
+    .small-menu-item{
+        @apply
+        lg:grid lg:grid-cols-3 gap-2 md:grid md:grid-cols-2
+    }
+    .main-header-logo{
+        @apply container relative mx-auto px-10 font-bold mt-[60px] font-vazir
+        md:mt-[45px] lg:mt-[60px]
+    }
+    .main-header-logo-1{
+        @apply w-full
+        hidden md:block
+    }
+    .main-header-logo-2{
+        @apply
+        hidden md:block
+        md:absolute md:top-0 md:left-[43%] md:w-[100px] md:mix-blend-multiply
+        lg:w-[130px]
+
+    }
+    .main-header-logo-3{
+        @apply
+        block w-[50%] md:hidden
+        mr-0
+    }
+    .main-header-logo-title{
+        @apply block md:hidden text-luster-2 font-vazir font-bold pt-8 pr-5
+    }
+    .container{
+        max-width: 100%;
+    }
+    .mtopsub100{
+        margin-top: 100px;
+    }
+    .mtop50{
+        margin-top: 50px!important;
+    }
+    .cusw25{
+        width: 25%!important;
+    }
+    .cusw75{
+        width: 75%!important;
+    }
+    /* preside colleague design start */
+    .members-header{
+        @apply py-2 border-b-2 border-b-luster-1 text-center text-white bg-luster-2
+    }
+    .members-list{
+        @apply grid grid-cols-1
+        sm:grid sm:grid-cols-2
+        lg:grid lg:grid-cols-3
+        flex  justify-center items-center
+    }
+    .card{
+        @apply w-[220px] h-auto
+        bg-amber-50  drop-shadow-xl rounded-xl
+        text-center text-luster-2 my-2 mx-auto
+    }
+    .card-image{
+        @apply w-28 h-28 mt-2
+        rounded-full mt-5
+        justify-center mx-auto
+    }
+    .card-btn{
+        @apply bg-luster-1 text-white
+        px-5  mb-5 rounded-xl
+        hover:scale-125 hover:duration-300
+    }
+    /* colleagues page design end */
+    /* preside dashboard design start */
+    .dashboard-aside{
+        /*max-w-62.5 ease-nav-brand z-990 ps ps__rtl transition-transform translate-x-full overflow-y-auto xl:translate-x-0 xl:bg-transparent*/
+        @apply   z-[100]  fixed
+        inset-y-0 my-4 mr-4 block   flex-wrap items-center
+        justify-between  rounded-2xl border-0 bg-white p-0 antialiased
+        shadow-none  duration-700 xl:right-0
+    }
+    .dashboard-controller{
+        @apply absolute
+        top-0 right-0 text-2xl
+        hidden p-4 opacity-50 cursor-pointer
+        text-slate-400 xl:hidden
+    }
+    .dashboard-aside-logo{
+        /* ease-nav-brand  max-w-full max-h-8  h-full*/
+        @apply inline  transition-all duration-200 w-16 h-auto
+    }
+    .dashboard-panel-name{
+        /*mr-1 font-semibold transition-all duration-200 ease-nav-brand*/
+        @apply  font-vazir
+    }
+    /* preside dashboard design start */
+
+    /* Multi Product design start */
+    .product-form-parent{
+        @apply
+        px-10 flex flex-col   justify-center justify-items-center
+    }
+    .product-form-parent div{
+        @apply mx-auto
+    }
+    .product-btn{
+        @apply
+        border-none px-3 py-3 rounded-[5px] shadow-3xl
+    }
+    /* Multi Product design end */
+
+    /* Slider design start*/
+    .btn-slider-add{
+        @apply
+        px-10 py-3 bg-gray-500 rounded-lg text-white mt-3 drop-shadow-xl
+    }
+    /* Slider design end*/
+}
