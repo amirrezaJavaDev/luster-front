@@ -23,7 +23,7 @@ import {getCookie} from "cookies-next";
 import {Toast} from "primereact/toast";
 
 const Seller = () => {
-    const [totalSize, setTotalSize] = useState(0);
+   /* const [totalSize, setTotalSize] = useState(0);
     const fileUploadRef = useRef(null);
     const [formData, setFormData] = useState({});
     const toast = useRef(null);
@@ -723,8 +723,8 @@ const Seller = () => {
                                 <span style={{direction:"ltr"}}>
                                 <label>عکس بالای صفحه</label>
                                 <br/>
-{/*                                 <FileUpload mode="basic" name="file" url="http://localhost:8084/api/admin/uploadImageTop" accept="image/jpeg" maxFileSize={150000} chooseLabel="Browse" auto onError={upErr} onValidationFail={upErr}/>
-                                    <img src="http://localhost:8084/api/admin/imageTop"/>*/}
+{/!*                                 <FileUpload mode="basic" name="file" url="http://localhost:8084/api/admin/uploadImageTop" accept="image/jpeg" maxFileSize={150000} chooseLabel="Browse" auto onError={upErr} onValidationFail={upErr}/>
+                                    <img src="http://localhost:8084/api/admin/imageTop"/>*!/}
                                     <FileUpload ref={fileUploadRef} name="file" url="http://localhost:8084/api/admin/uploadImageTop" accept="image/jpeg" maxFileSize={150000} chooseLabel="Browse" onError={upErr} onValidationFail={upErr}
                                                 onUpload={onTemplateUpload} onError={onTemplateClear} onClear={onTemplateClear}
                                                 headerTemplate={headerTemplate} itemTemplate={itemTemplate} emptyTemplate={emptyTemplate}
@@ -787,6 +787,6 @@ const Seller = () => {
                 </form>
             </Dashboard>
         </>
-    )
+    )*/
 }
 export default Seller;

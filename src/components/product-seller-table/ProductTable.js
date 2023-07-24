@@ -18,7 +18,7 @@ import {getCookies} from "cookies-next";
 import Link from "next/link";
 
 export const ProductTable=({data})=>{
-    let emptyProduct = {
+/*    let emptyProduct = {
         id: null,
         name: '',
         image: null,
@@ -185,7 +185,7 @@ export const ProductTable=({data})=>{
     const leftToolbarTemplate = () => {
         return (
             <div className="flex flex-wrap gap-2">
-                {/*onClick={openNew}*/}
+                {/!*onClick={openNew}*!/}
                 <Link href={"/admin/seller/product"}>
                     <Button label="New" icon="pi pi-plus" severity="success"  />
                 </Link>
@@ -287,7 +287,7 @@ export const ProductTable=({data})=>{
     return(
         <div className={`container mx-auto px-10 mt-1 bg-gray-300`}>
             <Toast ref={toast} />
-            {/*  table menu   */}
+            {/!*  table menu   *!/}
             <div className="w-auto">
                 <Toolbar className="mb-4" left={leftToolbarTemplate} right={rightToolbarTemplate}></Toolbar>
 
@@ -304,7 +304,7 @@ export const ProductTable=({data})=>{
                     <Column body={actionBodyTemplate} exportable={false}></Column>
                 </DataTable>
             </div>
-            {/*  update dialog   */}
+            {/!*  update dialog   *!/}
             <Dialog visible={productDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Product Details" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
                         //todo image location on server must be changed!!!
                 {product.image && <img src={`C:\\Users\\IT CITY\\Desktop\\paano\\image-test\\${product.productImage1}`} alt={product.image} className="product-image block m-auto pb-3" />}
@@ -359,7 +359,7 @@ export const ProductTable=({data})=>{
                     </div>
                 </div>
             </Dialog>
-            {/*  delete product pop up*/}
+            {/!*  delete product pop up*!/}
             <Dialog visible={deleteProductDialog} style={{ width: '32rem' }} header="توجه" modal
                     breakpoints={{ '960px': '75vw', '641px': '90vw' }} footer={deleteProductDialogFooter}
                     onHide={hideDeleteProductDialog}>
@@ -380,5 +380,5 @@ export const ProductTable=({data})=>{
                 </div>
             </Dialog>
         </div>
-    );
+    );*/
 }
